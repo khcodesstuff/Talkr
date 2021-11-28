@@ -1,0 +1,40 @@
+###
+GET http://localhost:3000/chat/ch
+
+### CHECK ROOM AVAIL
+POST http://localhost:3000/check_room_avail HTTP/1.1
+Content-Type: application/json
+
+{
+    "chat_name": "rmname",
+    "user_name": "unameuname"
+}
+
+### CHAT CREATE
+POST http://localhost:3000/chat_create HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_name": "unameuname",
+    "color": "placeholder",
+    "chat_name": "rmname"
+}
+
+### CHAT JOIN
+POST http://localhost:3000/chat_join HTTP/1.1
+Content-Type: application/json
+
+{
+    "user_name": "NEWUSER",
+    "color": "placeholder",
+    "chat_name": "rmname"
+}
+
+### Testing 
+POST http://localhost:3000/test HTTP/1.1
+Content-Type: application/json
+
+{
+    "chat_name": "rm",
+    "user_name": "uname"
+}

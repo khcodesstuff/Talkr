@@ -1,0 +1,172 @@
+@import './variables';
+
+.chat-content{
+    width: 100vw;
+    height: 100vh;
+    background-color: #2D1E2F;
+
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 64px;
+
+        background-color: #231724;
+        color: #D4CDF4;
+    }
+
+    @media (max-width: $media-checkpoint-mobile){
+        header{
+            text-align: center;
+        }
+    }
+
+    .chat-window{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        width: 500px; // 34vw
+        height: 70vh; // 560px
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        background-color: #EADEDA;
+        border-radius: 10px;
+
+        ::-webkit-scrollbar{
+            width: 0;
+        }
+
+        .chat-msgs-log{
+            display: flex;
+            flex-direction: column;
+
+            width: 92%;
+            max-height: 100%; 
+            margin: 4% 4% 0 4%;
+            overflow-y: auto;
+            scrollbar-width: none; 
+
+            .msg{
+                color: white;
+                font-size: 11pt;
+            }
+
+            .msg-bubble{
+                max-width: 300px;
+                padding: 8px 20px;
+                margin-bottom: 10px;
+            }
+
+            .event-msg-bubble{
+                border-radius: 40px;
+                text-align: center;
+            }
+
+            .user-circle{
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+            }
+
+            .chat-msg-sent{
+                align-self: flex-end;
+                display: flex;
+
+                .msg-bubble-right{
+                    margin-right: 5px;
+                    border-radius: 40px 60px 0 40px;
+                }
+                .user-circle-right{
+                    align-self: flex-end;
+                }
+            }
+
+            .chat-msg-received{
+                align-self: flex-start;
+                display: flex;
+
+                .msg-bubble-left{
+                    margin-left: 5px;
+                    border-radius: 60px 40px 40px 0;
+                }
+                .user-circle-left{
+                    align-self: flex-end;
+                }
+            }
+
+            .event-msg{
+                align-self: center;
+
+                .connected-msg-bubble{
+                    background-color: #00BD9D;
+                }
+
+                .logged-off-msg-bubble{
+                    background-color: brown;
+                }
+            }
+        }
+
+        .msg-input-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            width: 92%;
+            margin: 4%;
+
+            #msg-input{
+                display: block;
+                width: 100%;
+                height: 25px;
+                padding: 2px 60px 2px 20px;
+
+                background-color: #272838;
+                color: white;
+                border: none;
+                border-radius: 40px;
+            }
+
+            #send-btn{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                position: absolute;
+                right: 0px;
+                width: 40px;
+                height: 29px;
+
+                background-color: #00252D;
+                border: none;
+                border-radius: 0 40px 40px 0;
+
+                span{
+                    font-size: 12pt;
+                    color: white;
+                }
+            }
+
+            #send-btn:hover{
+                cursor: pointer;
+                background-color: #002b35;
+            }
+        }
+    }
+
+    @media (max-width: $media-checkpoint-mobile) {
+        .chat-window{
+            width: 100vw;
+            height: 60vh;
+        }
+    }
+}

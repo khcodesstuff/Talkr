@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('head') %> 
+        <script src="/public/javascript/menu_page.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="start-page-content">
+            <div class="menu">
+                <button id="join-btn">Join</button>
+                <button id="create-btn">Create</button>
+            </div>
+    
+            <div id="popup-fade"></div>
+            <div id="popup-create-join">
+                <form id="create-join-info-form" method="POST" novalidate>
+                    <label for="chat-name">Enter the name of the chat room</label>
+                    <input type="text" id="chat-name" name="chat_name" maxlength="20" required>
+                    <p class="error" id="chat-name-err"></p>
+    
+                    <label for="user-name">Enter your name</label>
+                    <input type="text" id="user-name" name="user_name" maxlength="20" required>
+                    <p class="error" id="user-name-err"></p>
+                    
+                    <label for="colors">Choose your color</label>
+                    <div id="colors">
+                        <div id="clr-1" class="clr-selected"></div>
+                        <div id="clr-2"></div>
+                        <div id="clr-3"></div>
+                        <div id="clr-4"></div>
+                        <div id="clr-5"></div>
+                    </div>
+                    <button id="create-popup-btn" type="button">Create</button>
+                    <button id="join-popup-btn" type="button">Join</button>
+                </form>
+            </div>
+            
+            <div class="anim">
+                <div id="anim-shape-1" class="triangle-shape"></div>
+                <div id="anim-shape-2" class="triangle-shape"></div>
+                <div id="anim-shape-3" class="triangle-shape"></div>
+                <div id="anim-shape-4" class="triangle-shape"></div>
+                <div id="anim-shape-5" class="triangle-shape"></div>
+                <div id="anim-shape-6" class="triangle-shape"></div>
+                <div id="anim-shape-7" class="triangle-shape"></div>
+                <div id="anim-shape-8" class="triangle-shape"></div>
+                <div id="anim-shape-9" class="triangle-shape"></div>
+                <div id="anim-shape-10" class="triangle-shape"></div>
+                <div id="anim-shape-11" class="triangle-shape"></div>
+                <div id="anim-shape-12" class="triangle-shape"></div>
+            </div>
+        </div>
+    </body>
+</html>

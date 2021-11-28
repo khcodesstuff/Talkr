@@ -1,0 +1,22 @@
+{
+    "name": "talkr",
+    "version": "0.0.1",
+    "description": "Chat app",
+    "scripts": {
+        "devStart": "nodemon app.js"
+    },
+    "dependencies": {
+        "colors": "^1.4.0",
+        "ejs": "^3.1.6",
+        "express": "^4.17.1",
+        "express-session": "^1.17.2",
+        "express-socket.io-session": "^1.3.5",
+        "socket.io": "^4.1.3",
+        "sqlite3": "^4.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^16.6.1",
+        "@types/socket.io": "^3.0.2",
+        "nodemon": "^2.0.12"
+    }
+}

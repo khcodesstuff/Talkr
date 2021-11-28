@@ -1,0 +1,1 @@
+SELECT COUNT(id) AS N_ROOMS FROM rooms;
